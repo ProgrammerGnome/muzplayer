@@ -101,7 +101,7 @@ void MusicPlayerWindow::onPlayClicked() {
     if (!file.isEmpty()) {
         player->setSource(QUrl::fromLocalFile(file));
         player->play();
-        currentTrackLabel->setText("Playback: " + QFileInfo(file).fileName());
+        currentTrackLabel->setText(PLAYBACK_ON + QFileInfo(file).fileName());
         logic->addToHistory(file);
     }
 }
@@ -110,11 +110,11 @@ void MusicPlayerWindow::onStopClicked()
 {
     if (player->playbackState() == QMediaPlayer::PlayingState) {
         player->pause();
-        currentTrackLabel->setText("Playback is paused: " + currentTrackLabel->text().remove("Playback: "));
+        currentTrackLabel->setText(PLAYBACK_OFF + currentTrackLabel->text().remove(PLAYBACK_ON));
     }
     else if (player->playbackState() == QMediaPlayer::PausedState) {
         player->play();
-        currentTrackLabel->setText("Playback: " + currentTrackLabel->text().remove("Playback is paused: "));
+        currentTrackLabel->setText(PLAYBACK_ON + currentTrackLabel->text().remove(PLAYBACK_OFF));
     }
 }
 

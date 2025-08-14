@@ -8,6 +8,9 @@
 #include <QString>
 #include <MusicPlayerLogic.h>
 
+/*
+ * MusicPlayerWindow depends on MusicPlayerLogic headers, but not vice versa
+ */
 class MusicPlayerWindow : public QMainWindow
 {
     Q_OBJECT

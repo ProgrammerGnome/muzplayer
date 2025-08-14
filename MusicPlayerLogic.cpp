@@ -11,6 +11,9 @@ MusicPlayerLogic::MusicPlayerLogic()
 }
 
 
+/*
+ * The randomization algoritm's functions
+ */
 
 void MusicPlayerLogic::setMusicFolder(const QString &folder) {
     musicFolder = folder;
