@@ -3,6 +3,8 @@
 A simple, tiny Qt-based music player application that supports `ogg`, `mp3`, `wav`, `flac`, `m4a`, and `aac` formats.  
 The player randomly selects files from the chosen folder and ensures that tracks played within the last 10 minutes are not repeated.
 
+#### Designed as an AUR package for Arch Linux.
+
 ## Features
 
 - **Selectable music folder** – only folders containing exclusively supported formats can be selected.
